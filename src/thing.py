@@ -1,6 +1,7 @@
 class Thing():
-    def __init__(self, a, b) -> None:
+    def __init__(self, a, b, c=5) -> None:
         self.a = a
         self.b = b
+        self.c = c
     
     
