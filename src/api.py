@@ -1,3 +1,4 @@
+import os
 from utils.clio import run_command
 
 class APIConfig():
@@ -9,9 +10,7 @@ def setup_script():
     )
     print(f'Setting up project {APIConfig.PROJECT_NAME}...')
     setup_commands = [
-        f'pip freeze',
-        f'pip install requirement/requirements_{APIConfig.PROJECT_NAME}.txt',
-        f'pip freeze'
+        f'pip install {os.path.join("requirements", f"requirements_{APIConfig.PROJECT_NAME}.txt")}',
     ]
     for command in setup_commands:
         print(f'> {command}')
