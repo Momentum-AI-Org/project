@@ -10,7 +10,7 @@ def setup_script():
     )
     print(f'Setting up project {APIConfig.PROJECT_NAME}...')
     setup_commands = [
-        f'pip install {os.path.join("requirements", f"requirements_{APIConfig.PROJECT_NAME}.txt")}',
+        f'pip install -r {os.path.join("requirements", f"requirements_{APIConfig.PROJECT_NAME}.txt")}',
     ]
     for command in setup_commands:
         print(f'> {command}')
