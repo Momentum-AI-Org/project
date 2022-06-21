@@ -10,7 +10,7 @@ def setup_script():
     print(f'Setting up project {APIConfig.PROJECT_NAME}...')
     setup_commands = [
         f'pip freeze',
-        f'pip install requirements_{APIConfig.PROJECT_NAME}.txt',
+        f'pip install requirement/requirements_{APIConfig.PROJECT_NAME}.txt',
         f'pip freeze'
     ]
     for command in setup_commands:
