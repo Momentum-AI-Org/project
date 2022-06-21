@@ -13,8 +13,6 @@ def setup_script():
         f'pip install -r {os.path.join("requirements", f"requirements_{APIConfig.PROJECT_NAME}.txt")}',
     ]
     for command in setup_commands:
-        print(f'> {command}')
-        result = run_command(command)
-        print(result)
+        run_command(command)
 
 
