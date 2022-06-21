@@ -8,6 +8,12 @@ def setup_script():
         'Make sure to set the project name before running this setup script!'
     )
     print(f'Setting up project {APIConfig.PROJECT_NAME}...')
-    run_command(f'pip install requirements_{APIConfig.PROJECT_NAME}.txt')
+    setup_commands = [
+        f'pip install requirements_{APIConfig.PROJECT_NAME}.txt',
+    ]
+    for command in setup_commands:
+        print(f'> {command}')
+        result = run_command(command)
+        print(result)
 
 
